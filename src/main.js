@@ -3,9 +3,11 @@
 import 'normalize.css';
 import Vue from 'vue';
 import fastclick from 'fastclick';
+import 'styles/border.css';// 1像素边框问题
+import 'styles/test.css';
+import 'styles/iconfont.css';
 import App from './App';
 import router from './router';
-import './assets/styles/border.css';// 1像素边框问题
 
 Vue.config.productionTip = false;
 fastclick.attach(document.body);

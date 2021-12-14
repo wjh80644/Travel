@@ -13,6 +13,8 @@
   "dependencies": {
     "fastclick": "^1.0.6",
     "normalize.css": "^8.0.1",
+    "stylus": "^0.55.0",
+    "stylus-loader": "^3.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
