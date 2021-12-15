@@ -15,7 +15,9 @@
     "normalize.css": "^8.0.1",
     "stylus": "^0.55.0",
     "stylus-loader": "^3.0.1",
+    "swiper": "^3.4.2",
     "vue": "^2.5.2",
+    "vue-awesome-swiper": "^2.6.7",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
