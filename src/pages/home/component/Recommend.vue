@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img :src="item.imgUrl" class="item-img">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -16,42 +16,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data() {
-    return {
-      recommendList: [
-        {
-          id: 1,
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-          title: '故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿',
-          desc: '浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿',
-        },
-        {
-          id: 2,
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-          title: '故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿',
-          desc: '浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿',
-        },
-        {
-          id: 3,
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-          title: '故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿',
-          desc: '浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿',
-        },
-        {
-          id: 4,
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-          title: '故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿',
-          desc: '浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿',
-        },
-        {
-          id: 5,
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-          title: '故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿',
-          desc: '浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿',
-        },
-      ]
-
-    }
+  props: {
+    list: Array
   }
 }
 </script>

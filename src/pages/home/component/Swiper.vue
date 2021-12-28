@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper">
-    <swiper :options="swiperOption">
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+  <div class="wrapper">    
+    <swiper :options="swiperOption" v-if="showSwiper"><!-- 避免由空数组数据创建组件造成轮播首次显示第四张图 -->
+      <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" />
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -12,26 +12,22 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array,
+  },
   data() {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true,
       },
-      swiperList: [
-        {
-          id: '0001',
-          imgUrl:
-            'https://img1.qunarzz.com/sight/p0/2109/20/204e37770f73cd73a3.water.jpg_600x330_8d8df0f9.jpg',
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://img1.qunarzz.com/sight/p0/201302/28/ee994376f26a254fc8d65eac.jpg_600x330_9677b91a.jpg',
-        },
-      ],
     };
   },
+  computed: {
+    showSwiper() {
+      return this.list.length
+    }
+  }
 };
 </script>
 
@@ -44,7 +40,7 @@ export default {
   overflow: hidden;
   width: 100%;
   height: 0;
-  padding-bottom: 55%;
+  padding-bottom: 30%;
   background-color: #eee;
 
   .swiper-img {

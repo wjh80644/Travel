@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
       >
         <div class="item-img-wrapper">
@@ -21,47 +21,9 @@
 <script>
 export default {
   name: "HomeWeekend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: 1,
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg",
-          title: "故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿",
-          desc: "浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿",
-        },
-        {
-          id: 2,
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg",
-          title: "故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿",
-          desc: "浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿",
-        },
-        {
-          id: 3,
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg",
-          title: "故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿",
-          desc: "浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿",
-        },
-        {
-          id: 4,
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg",
-          title: "故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿",
-          desc: "浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿",
-        },
-        {
-          id: 5,
-          imgUrl:
-            "https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg",
-          title: "故宫博物院故宫博物院故宫博物院浪漫北京首站，帝王宫殿",
-          desc: "浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿浪漫北京首站，帝王宫殿",
-        },
-      ],
-    };
-  },
+  props: {
+    list: Array,
+  }
 };
 </script>
 
@@ -69,7 +31,6 @@ export default {
 @import '~styles/mixins.styl';
 
 .title {
-  margin-top: 0.2rem;
   line-height: 0.8rem;
   background: #eee;
   text-indent: 0.2rem;
@@ -87,7 +48,7 @@ p {
 .item-img-wrapper {
   overflow: hidden;
   height: 0;
-  padding-bottom: 33.9%;
+  padding-bottom: 37.09%;
 }
 
 .item-img {
