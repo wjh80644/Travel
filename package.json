@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "better-scroll": "^1.8.1",
     "fastclick": "^1.0.6",
     "normalize.css": "^8.0.1",
     "stylus": "^0.55.0",
